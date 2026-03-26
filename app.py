@@ -163,6 +163,9 @@ elif tab == "Category Profit":
     st.success(
         f"**{winner['Category']}** leads with **${winner['Profit']:,.2f}** in profit!"
     )
+    st.warning(
+        f'**Tech** has a high concentration risk, if tech category faces and issues, over 50% of profit is vulnerable. \nFurniture generates only about 6% of profit despite likely needint significant storage space, consider reducing furniture inventory drastically and reallocating resources gained towards leading categories.' 
+    )
     
     # Create the bar chart
     fig = px.bar(
@@ -190,7 +193,7 @@ elif tab == "Category Profit":
 
 # QUESTION 2: Region Analysis
 elif tab == "Region Analysis":
-    st.title("Which Region Sells/Profits the least?")
+    st.title("Which Region Sells the most & which profits the least?")
     st.markdown("---")
     
     # Calculate region data
@@ -207,6 +210,9 @@ elif tab == "Region Analysis":
     st.subheader("Key Insights")
     col1, col2 = st.columns(2)
     
+    st.subheader('Oppurtunity')
+    st.write('**Central Region Problem:**\n-3rd highest sales (500k), but lowest profits($40k). \n-Margin is 7% BELOW company average.\n-If central achieved East\'s margin, additional $28k+ profit.')
+    st.write('**South Region Oppurtunity:**\n-Lowest sales volume suggesting underpenetrated market\n-Decent margins means profitable when sold.\n-Growth potential: allocate additional marketing spend to this region')
     with col1:
         highest_sales = region_data.loc[region_data['Sales'].idxmax()]
         st.info(
@@ -286,8 +292,8 @@ elif tab == "Discount vs Profit":
     st.write(f"""
     {emoji} **Interpretation:** 
     \n{interpretation}. 
-    For every 1 point increase in discount rate, profit tends to decrease by 
-    {abs(correlation)*100:.1f}%.
+    -For every 10% discount offered, profit tends to decrease by 
+    {abs(correlation)*10:.1f}%.\n-Discounts under 20% show minimal profit erosion.\nReducing average discount could drive a profit increase, with the inherent risk of a drop in volume. 
     """)
     
     # Filter outliers for better visualization
@@ -420,8 +426,9 @@ elif tab == "Monthly Trend":
     
     st.write("""
     **Observation:** Sales typically spike in **November** (Black Friday effect),
-    but drop in **December**, this is unusual for retail. Suggesting a B2B business
-    where companies reduce purchases during holiday shutdowns/vacations.
+    but drop in **December**, this is unusual for retail. This suggests a B2B business
+    where companies reduce purchases during holiday shutdowns/vacations.\n\n**Potential Strategy:** Leading up to November, when sales are strong, ensure inventory is built with high margin items.
+    December shows a B2B holiday shutdown pattern, create promotions targeting B2B companies and budgets i.e. bulk buying discounts. We may also be able to capitalize on post holiday recovery, feature newer attractive products during this time. 
     """)
     
     # Create line chart
