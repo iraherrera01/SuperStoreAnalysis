@@ -292,9 +292,8 @@ elif tab == "Discount vs Profit":
     
     st.write(f"""
     {emoji} **Interpretation:** 
-    \n{interpretation}. 
-    -For every 10% discount offered, profit tends to decrease by 
-    {abs(correlation)*10:.1f}%.\n-Discounts under 20% show minimal profit erosion.\nReducing average discount could drive a profit increase, with the inherent risk of a drop in volume. 
+    \n{interpretation}.  \n-For every 10% discount offered, profit tends to decrease by 
+    {abs(correlation)*10:.1f}%.  \n-Discounts under 20% show minimal profit erosion.  \nReducing average discount could drive a profit increase, with the inherent risk of a drop in volume. 
     """)
     
     # Filter outliers for better visualization
