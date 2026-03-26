@@ -211,7 +211,7 @@ elif tab == "Region Analysis":
     col1, col2 = st.columns(2)
     
     st.subheader('Oppurtunity')
-    st.write("""**Central Region Problem:**  \n-3rd highest sales (500k), but lowest profits($40k).  \n-Margin is 7% BELOW company average.  \n-If central achieved East\'s margin, additional $28k+ profit.""")
+    st.write("""**Central Region Problem:**  \n-3rd highest sales (500k), but lowest profits(\$40k).  \n-Margin is 7% BELOW company average.  \n-If central achieved East\'s margin, additional \$28k+ profit.""")
     st.write("""**South Region Oppurtunity:**  \n-Lowest sales volume suggesting underpenetrated market  \n-Decent margins means profitable when sold.  \n-Growth potential: allocate additional marketing spend to this region""")
     
     with col1:
