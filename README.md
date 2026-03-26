@@ -24,12 +24,13 @@ This project was built as a **portfolio piece** targeting internships in:
 ---
 
 ## Quick Start
+https://superstoreanalysis-m3wwy6bumyzuouwgmiz5xd.streamlit.app/
 
 ### Option 1: Run Locally
 
 ```bash
 # Clone the repository
-git clone 
+git clone https://github.com/iraherrera01/SuperStoreAnalysis.git
 cd SuperStoreAnalysis
 
 # Install dependencies
